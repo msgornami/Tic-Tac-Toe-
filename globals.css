@@ -1,0 +1,68 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 18% 10%;
+    --foreground: 0 0% 100%;
+    --card: 250 18% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 250 18% 10%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 246 100% 73%;
+    --primary-foreground: 250 18% 10%;
+    --secondary: 220 100% 63%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 250 10% 20%;
+    --muted-foreground: 250 10% 70%;
+    --accent: 220 100% 63%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 250 10% 25%;
+    --input: 250 10% 25%;
+    --ring: 246 100% 73%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body overflow-x-hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.grid-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.grid-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.grid-cell:active {
+  transform: scale(0.95);
+}
+
+.neon-border {
+  box-shadow: 0 0 15px hsla(var(--primary), 0.3);
+}
+
+.neon-text {
+  text-shadow: 0 0 8px hsla(var(--primary), 0.5);
+}
