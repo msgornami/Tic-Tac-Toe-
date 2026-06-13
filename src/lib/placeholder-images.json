@@ -1,0 +1,17 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-game",
+      "description": "Abstract futuristic neon grid",
+      "imageUrl": "https://picsum.photos/seed/boltgrid-hero/800/600",
+      "imageHint": "neon grid"
+    },
+    {
+      "id": "avatar-default",
+      "description": "Default avatar for players",
+      "imageUrl": "https://picsum.photos/seed/boltgrid-player/200/200",
+      "imageHint": "user profile"
+    }
+  ]
+}
